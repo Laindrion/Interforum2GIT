@@ -14806,12 +14806,14 @@ label textarea {
   height: 8.75rem;
   left: -4.375rem;
   top: 4.0625rem;
+  z-index: -1;
 }
 .page::after {
   width: 3rem;
   height: 3rem;
   right: 1.5rem;
   bottom: 3rem;
+  z-index: -1;
 }
 .page__inner {
   background: oklch(100% 0 0);
