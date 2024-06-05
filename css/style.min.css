@@ -13191,7 +13191,7 @@ h2 {
 }
 
 /* CIRCLE */
-.page::after, .page::before, .contacts__info::after, .contacts__info::before, .faq::after, .faq::before, .management .row::before, .management::after, .management::before, .about__img::before, .about::after, .about::before {
+.page::after, .page::before, .contacts__details::after, .contacts__details::before, .faq::after, .faq::before, .management .row::before, .management::after, .management::before, .about__img::before, .about::after, .about::before {
   content: "";
   position: absolute;
   width: 7.375rem;
@@ -14643,18 +14643,18 @@ label textarea {
        CONTACTS PAGE
     **********************
 **********************/
-.contacts__info {
+.contacts__details {
   padding-bottom: 5.9375rem;
   position: relative;
   z-index: 0;
 }
-.contacts__info::before {
+.contacts__details::before {
   bottom: 3.875rem;
   width: 4.125rem;
   height: 4.125rem;
   left: -2.0625rem;
 }
-.contacts__info::after {
+.contacts__details::after {
   width: 3rem;
   height: 3rem;
   right: -1rem;
