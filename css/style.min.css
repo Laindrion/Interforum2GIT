@@ -13736,6 +13736,15 @@ label textarea {
        HERO
     **********************
 **********************/
+:root {
+  --X: 0;
+  --Y: 0;
+  --heroBeforeX: 0;
+  --heroBeforeY: 0;
+  --heroAfterX: 0;
+  --heroAfterY: 0;
+}
+
 .hero {
   background: linear-gradient(139.81deg, oklch(63.64% 0.127 277.55) 22.434%, oklch(73.43% 0.123 223.99) 113.926%);
   padding-top: 7.5rem;
@@ -13746,17 +13755,22 @@ label textarea {
 }
 .hero::before {
   content: " ";
-  top: 0;
+  -webkit-transform: translate(var(--X), var(--Y));
+  -ms-transform: translate(var(--X), var(--Y));
+  transform: translate(var(--X), var(--Y));
+  top: 0rem;
   right: 16rem;
   z-index: 1;
   -webkit-filter: blur(45px);
   filter: blur(45px);
-  -webkit-animation: blurAnimationUpAndDown 10s linear infinite;
-  animation: blurAnimationUpAndDown 10s linear infinite;
+  /* animation: blurAnimationUpAndDown 10s linear infinite; */
 }
 .hero::after {
-  bottom: 0;
-  right: 30%;
+  -webkit-transform: translate(var(--X), var(--Y));
+  -ms-transform: translate(var(--X), var(--Y));
+  transform: translate(var(--X), var(--Y));
+  bottom: 0rem;
+  right: 30rem;
   top: unset;
   -webkit-filter: blur(50px);
   filter: blur(50px);
@@ -13805,6 +13819,9 @@ label textarea {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  -webkit-transform: translate(var(--X), calc(-50% + var(--Y)));
+  -ms-transform: translate(var(--X), calc(-50% + var(--Y)));
+  transform: translate(var(--X), calc(-50% + var(--Y)));
   -webkit-filter: blur(55px);
   filter: blur(55px);
 }
@@ -13817,6 +13834,9 @@ label textarea {
   width: 26.0375rem;
   height: 48.0375rem;
   margin-top: -9rem;
+  -webkit-transform: translate(var(--X), var(--Y));
+  -ms-transform: translate(var(--X), var(--Y));
+  transform: translate(var(--X), var(--Y));
 }
 .hero__image img {
   height: 100%;
