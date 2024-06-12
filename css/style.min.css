@@ -13114,9 +13114,9 @@ table {
   border: 1px solid oklch(67.88% 0.117 248.92);
   border-radius: 5px;
   padding: 0;
-  -webkit-transition: color 0.4s border-color 0.5s;
-  -o-transition: color 0.4s border-color 0.5s;
-  transition: color 0.4s border-color 0.5s;
+  -webkit-transition: color 0.4s, border-color 0.5s;
+  -o-transition: color 0.4s, border-color 0.5s;
+  transition: color 0.4s, border-color 0.5s;
   display: inline-block;
   overflow: hidden;
   z-index: 0;
@@ -13171,10 +13171,10 @@ table {
 }
 .btn:hover {
   color: oklch(100% 0 0);
-  border-color: oklch(100% 0 0);
-  -webkit-transition: color 0.5s border-color 0.5s;
-  -o-transition: color 0.5s border-color 0.5s;
-  transition: color 0.5s border-color 0.5s;
+  border: 1px solid transparent;
+  -webkit-transition: color 0.5s, border-color 0.5s;
+  -o-transition: color 0.5s, border-color 0.5s;
+  transition: color 0.5s, border-color 0.5s;
 }
 
 .btn__primary {
@@ -13186,9 +13186,9 @@ table {
   border: 1px solid oklch(100% 0 0);
   border-radius: 5px;
   padding: 0;
-  -webkit-transition: color 0.4s border-color 0.5s;
-  -o-transition: color 0.4s border-color 0.5s;
-  transition: color 0.4s border-color 0.5s;
+  -webkit-transition: color 0.4s, border-color 0.5s;
+  -o-transition: color 0.4s, border-color 0.5s;
+  transition: color 0.4s, border-color 0.5s;
   display: inline-block;
   overflow: hidden;
   position: relative;
@@ -13620,7 +13620,7 @@ label textarea {
 }
 
 .bouncing-blobs-container {
-  position: fixed;
+  position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
@@ -14675,9 +14675,15 @@ label textarea {
 .links {
   padding-top: 4rem;
   padding-bottom: 4.625rem;
+  position: relative;
+  z-index: 0;
 }
 .links h2 {
   padding-bottom: 2.75rem;
+}
+.links .container {
+  position: relative;
+  z-index: 0;
 }
 .links__cover {
   display: grid;
