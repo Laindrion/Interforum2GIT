@@ -15784,6 +15784,10 @@ label textarea {
   background-repeat: no-repeat;
   z-index: 0;
   padding: 20px 0;
+  background-image: url("../images/background-image.png");
+  background-size: contain;
+  background-position: left bottom;
+  /* -20rem */
   /* &::before {
       display: none;
   } */
@@ -15803,6 +15807,10 @@ label textarea {
 }
 .org_structure ::-webkit-scrollbar-thumb {
   background: oklch(67.88% 0.117 248.92);
+  border-radius: 10px;
+}
+.org_structure .page__inner {
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
 }
 .org_structure .information__inner {
