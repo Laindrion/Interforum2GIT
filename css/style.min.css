@@ -13317,7 +13317,7 @@ h2 {
 }
 
 /* CIRCLE */
-.page::after, .page::before, .contacts__details::after, .contacts__details::before, .faq::after, .faq::before, .management .row::before, .management::after, .management::before, .about__img::before, .about::after, .about::before {
+.uzbekistan__info::before, .page::after, .page::before, .contacts__details::before, .faq::after, .faq::before, .management .row::before, .management::after, .management::before, .about__img::before, .about::after, .about::before, .section__header::after {
   content: "";
   position: absolute;
   width: 7.375rem;
@@ -13380,6 +13380,8 @@ body {
 
 .section__header {
   padding: 1.5625rem 0;
+  position: relative;
+  z-index: 0;
 }
 .section__header-text {
   margin-bottom: 0.9375rem;
@@ -13388,6 +13390,19 @@ body {
   font-weight: 500;
   line-height: 1.5625rem;
   color: oklch(51.73% 0 0);
+}
+.section__header::after {
+  top: 2.25rem;
+  right: -1.5rem;
+  width: 3rem;
+  height: 3rem;
+  z-index: -1;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 a {
@@ -13572,6 +13587,86 @@ label textarea {
   display: none;
 }
 
+.bouncing-blob {
+  width: 32vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.bouncing-blob--blue {
+  background: #4783c7;
+}
+
+.bouncing-blob--white {
+  background: #ffffff;
+  z-index: 2;
+  width: 15vw;
+}
+
+.bouncing-blob--purple {
+  background: #8c8ff1;
+}
+
+.bouncing-blob--pink {
+  background: rgba(226, 137, 205, 0.3137254902);
+}
+
+.bouncing-blobs-container {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bouncing-blobs-glass {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(140px);
+  -webkit-backdrop-filter: blur(140px);
+  pointer-events: none;
+}
+
+.bouncing-blobs {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .bouncing-blobs-glass {
+    backdrop-filter: blur(120px);
+    -webkit-backdrop-filter: blur(120px);
+  }
+}
+@media (max-width: 500px) {
+  .bouncing-blob {
+    width: 60vw;
+  }
+  .bouncing-blob--white {
+    width: 30vw;
+  }
+  .bouncing-blobs-glass {
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(90px);
+  }
+}
 .footer {
   margin-top: auto;
   padding-top: 3.125rem;
@@ -13674,9 +13769,9 @@ label textarea {
   padding-top: 1.5rem;
 }
 .menu__list-item:hover > .menu__list-link::after {
-  -webkit-transform: translateY(50%) rotate(180deg);
-  -ms-transform: translateY(50%) rotate(180deg);
-  transform: translateY(50%) rotate(180deg);
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
   -o-transition: transform 0.4s;
@@ -13690,7 +13785,7 @@ label textarea {
   line-height: 1.5625rem;
   color: oklch(100% 0 0);
   display: inline-block;
-  padding: 1.625rem 0 1rem;
+  padding: 1.5rem 0 1.5rem;
   position: relative;
   padding-right: 1.25rem;
 }
@@ -13707,9 +13802,9 @@ label textarea {
   height: 0.3125rem;
   right: 0;
   top: 50%;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
   -o-transition: transform 0.4s;
@@ -14640,7 +14735,7 @@ label textarea {
   width: 8.75rem;
   height: 8.75rem;
   right: -4.375rem;
-  top: -5rem;
+  top: -6rem;
   z-index: -1;
 }
 .management .row {
@@ -14695,17 +14790,17 @@ label textarea {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5625rem;
-  color: oklch(66.33% 0 0);
+  color: oklch(100% 0 0);
   padding: 0.3125rem 0.875rem;
   padding-right: 3.5rem;
   border-radius: 20px;
-  background: oklch(97.91% 0 0);
+  background: oklch(65.41% 0.12 264.97);
   position: relative;
 }
 .management .accordion__btn::after {
   content: "";
   position: absolute;
-  background-image: url("../images/arrow-gray.svg");
+  background-image: url("../images/arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 0.6875rem;
@@ -14762,6 +14857,8 @@ label textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 1.875rem;
 }
 .management__contacts a {
@@ -14952,10 +15049,11 @@ label textarea {
   left: -2.0625rem;
 }
 .contacts__details::after {
+  /*   @extend %circle;
   width: 3rem;
   height: 3rem;
   right: -1rem;
-  top: -5rem;
+  top: -5rem; */
 }
 
 /* It's not a section, it's actually inside the contacts__info section. */
@@ -15180,7 +15278,9 @@ label textarea {
   /* width */
   /* Track */
   /* Handle */
-  padding-bottom: 74px;
+  padding-bottom: 15.625rem;
+  position: relative;
+  z-index: 0;
 }
 .uzbekistan__info ::-webkit-scrollbar {
   width: 11px;
@@ -15194,6 +15294,31 @@ label textarea {
 .uzbekistan__info ::-webkit-scrollbar-thumb {
   background: oklch(67.88% 0.117 248.92);
   border-radius: 5px;
+}
+.uzbekistan__info::before {
+  bottom: 5.9375rem;
+  left: -2.0625rem;
+  width: 4.125rem;
+  height: 4.125rem;
+}
+.uzbekistan__info::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/background-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 0rem;
+  height: 0rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+  width: 100%;
+  height: 19rem;
+  width: 100%;
+  z-index: -1;
+  background-position: 0 -14rem;
 }
 .uzbekistan__info .region__map svg {
   width: 100%;
@@ -15438,43 +15563,37 @@ label textarea {
 .uzbekistan__about {
   text-align: center;
   text-wrap: wrap;
+  background: linear-gradient(139.81deg, oklch(63.64% 0.127 277.55) 22.434%, oklch(73.43% 0.123 223.99) 113.926%);
+  padding-top: 2.9375rem;
+  padding-bottom: 4.3125rem;
+  /* Changing the container of the text */
 }
 .uzbekistan__about h3 {
   font-family: "ALS Hauss", sans-serif;
   font-size: 1.5625rem;
   font-weight: 700;
   line-height: 1.875rem;
-  color: oklch(26.49% 0.049 260.67);
+  color: oklch(100% 0 0);
   margin-bottom: 0;
   height: 60px;
 }
 .uzbekistan__about-item {
-  /* @include fontFt(1.2, 300, 24px, $text); */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   gap: 23px;
-  padding: 24px 46px 29px 41px;
-  border-radius: 20px;
-  background: #FFF;
-  -webkit-box-shadow: 0px 1px 17px 0px rgba(187, 180, 180, 0.25);
-  box-shadow: 0px 1px 17px 0px rgba(187, 180, 180, 0.25);
-  /* max-height: 657px; */
-  min-height: 41.0625rem;
-  /* height: 100%; */
+  padding: 1.8125rem 0.9375rem 1.5625rem 1.75rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-transition: 0.4s all;
-  -o-transition: 0.4s all;
-  transition: 0.4s all;
+}
+.uzbekistan__about-item:not(:has(.uzbekistan__about-btn)) {
+  padding-bottom: 4.125rem;
 }
 .uzbekistan__about-item.active {
   overflow: visible;
@@ -15482,72 +15601,76 @@ label textarea {
   -o-transition: 0.4s all;
   transition: 0.4s all;
 }
+.uzbekistan__about-item > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 0.75rem;
+  max-width: 27rem;
+  text-align: left;
+}
 .uzbekistan__about-accardion {
-  /* overflow: hidden; */
-}
-.uzbekistan__about-accardion.active {
-  /* overflow: visible; */
-}
-.uzbekistan__about-accardion.active p {
-  grid-template-rows: 100px 1fr;
-  -webkit-transition: 0.4s all;
-  -o-transition: 0.4s all;
-  transition: 0.4s all;
-}
-.uzbekistan__about-accardion.active .text {
-  opacity: 1;
-  -webkit-transition: 1s all;
-  -o-transition: 1s all;
-  transition: 1s all;
-}
-.uzbekistan__about-accardion.active span:not(.text) {
-  -webkit-transition: 0.4s all;
-  -o-transition: 0.4s all;
-  transition: 0.4s all;
-  /* height: 250px; */
+  /* 13rem */
+  overflow: hidden;
+  /* Passive */
+  /* Active */
 }
 .uzbekistan__about-accardion > p {
-  display: grid;
-  grid-template-rows: 100px 0fr;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  color: oklch(100% 0 0);
   overflow: hidden;
-  -webkit-transition: 0.4s all;
-  -o-transition: 0.4s all;
-  transition: 0.4s all;
+  display: inline-block;
+  /* max-height: 10%; */
+  /*  height: 80px; */
+  -webkit-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
 }
-.uzbekistan__about-accardion > p span {
-  overflow: hidden;
-  -webkit-transition: 1s all;
-  -o-transition: 1s all;
-  transition: 1s all;
-  /*  &:not(.text) {
-      height: 200px;
-  } */
+.uzbekistan__about-accardion > p strong {
+  color: oklch(100% 0 0);
+  text-decoration: underline;
 }
-.uzbekistan__about-accardion > p .text {
-  opacity: 0;
+.uzbekistan__about-accardion.active p {
+  /* height: 10rem; */
+  -webkit-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
 }
 .uzbekistan__about-img {
   width: 70%;
   margin: 0 auto;
-  aspect-ratio: 1/1;
+  aspect-ratio: 3/2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .uzbekistan__about .col-lg-6 img {
-  height: auto;
+  height: 100%;
   -o-object-fit: scale-down;
   object-fit: scale-down;
 }
 .uzbekistan__about-btn {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.625rem;
-  color: oklch(67.88% 0.117 248.92);
+  font-weight: 500;
+  line-height: 1.5625rem;
+  color: oklch(100% 0 0);
   margin-top: auto;
   position: relative;
   -webkit-user-select: none;
@@ -15559,10 +15682,10 @@ label textarea {
 .uzbekistan__about-btn::after {
   content: "";
   position: absolute;
-  background-image: url("../images/arrow-blue.svg");
+  background-image: url("../images/arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 0.775rem;
+  width: 0.875rem;
   height: 0.55rem;
   right: 0.5rem;
   top: 50%;
@@ -15589,12 +15712,18 @@ label textarea {
 .uzbekistan__holidays::before {
   top: 50%;
 }
+.uzbekistan__holidays h2 {
+  text-align: left;
+}
 .uzbekistan__holidays h4 {
-  font-family: "ALS Hauss", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 1.5625rem;
+  line-height: 1.625rem;
   color: oklch(26.49% 0.049 260.67);
+  min-height: 3.25rem;
+  margin-bottom: 0;
+  text-wrap: balance;
 }
 .uzbekistan__holidays-wrapper {
   display: -webkit-box;
@@ -15607,7 +15736,7 @@ label textarea {
   row-gap: 30px;
 }
 .uzbekistan__holidays-wrapper > .row {
-  row-gap: 50px;
+  row-gap: 1.25rem;
 }
 .uzbekistan__holidays .col-12 {
   display: -webkit-box;
@@ -15621,24 +15750,22 @@ label textarea {
   /* border-radius: 50%; */
   overflow: hidden;
   border-radius: 50%;
-  height: 237px;
-  width: 237px;
+  height: 10.5rem;
+  width: 10.5rem;
 }
 .uzbekistan__holidays-img img {
   width: 100%;
   height: 100%;
 }
-.uzbekistan__holidays-item .row .col-lg-6 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
+.uzbekistan__holidays-item {
+  background: oklch(100% 0 0);
+  border-radius: 10px;
+  padding: 1.6875rem 1.5rem 1.1875rem 1.5rem;
+}
+.uzbekistan__holidays-item > .row .col-lg-6 {
+  /*  display: flex;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: center; */
 }
 .uzbekistan__holidays-item p {
   text-wrap: pretty;
@@ -15771,7 +15898,7 @@ label textarea {
   justify-content: space-around;
   width: 100%;
   padding-bottom: 5rem;
-  overflow: auto;
+  overflow: hidden;
 }
 .org_structure .treee .tree_first_inner {
   display: -webkit-box;
@@ -16063,6 +16190,8 @@ label textarea {
   font-weight: 400;
   line-height: 1.5625rem;
   color: oklch(100% 0 0);
+  display: block;
+  overflow: hidden;
   position: relative;
 }
 .footer__list a::before {
@@ -16074,7 +16203,27 @@ label textarea {
   width: 100%;
   height: 2px;
   left: 0;
-  bottom: 0;
+  bottom: -6px;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  /*  transform-origin: right; */
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  z-index: 1;
+}
+.footer__list a:hover:before {
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 .footer__info {
   display: -webkit-box;
@@ -16156,6 +16305,20 @@ label textarea {
   }
   .org_structure .child_second::after {
     width: 119.8%;
+  }
+}
+@media (max-width: 1200px) {
+  .org_structure .treee_top {
+    overflow: auto;
+  }
+  .management__contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .uzbekistan__about-item > div:last-child {
+    max-width: 20rem;
   }
 }
 @media (max-width: 991px) {
@@ -16424,6 +16587,15 @@ label textarea {
     top: unset;
     bottom: 1rem;
   }
+  .uzbekistan__about-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .uzbekistan__about-item > div:last-child {
+    max-width: 100%;
+  }
 }
 @media (max-width: 485px) {
   .contacts__map-header {
@@ -16468,4 +16640,58 @@ label textarea {
   html {
     font-size: 9px;
   }
+}
+.btn__test-container {
+  background: oklch(0% 0 0);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.x_box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 200px;
+  text-decoration: none !important;
+  z-index: 20;
+}
+
+.x_box,
+.x_circle {
+  content: "";
+  height: 80px;
+  font-family: Gilroy;
+}
+
+.x_circle {
+  width: 80px;
+  background-color: #4961ff;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 2px 30px rgba(62, 174, 255, 0.3);
+  box-shadow: 0 2px 30px rgba(62, 174, 255, 0.3);
+  pointer-events: none;
+  -webkit-transition: width 0.6s, left 0.3s, top 0.3s, background-color 0.4s;
+  -o-transition: width 0.6s, left 0.3s, top 0.3s, background-color 0.4s;
+  transition: width 0.6s, left 0.3s, top 0.3s, background-color 0.4s;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.x_box span {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  -webkit-clip-path: circle(40px at 16px 50%);
+  clip-path: circle(40px at 16px 50%);
+  -webkit-clip-path: circle(40px at 16px calc(50% + 0px));
+  clip-path: circle(40px at 16px calc(50% + 0px));
 }
