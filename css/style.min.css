@@ -13125,7 +13125,7 @@ table {
 .btn::after {
   content: "";
   position: absolute;
-  background-image: url("../images/arrow-tail-blue.svg");
+  background-image: url("../images/arrows-tail.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 1.2375rem;
@@ -13135,6 +13135,8 @@ table {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  background-size: cover;
+  background-position: 0 -1.1rem;
 }
 .btn::before {
   content: "";
@@ -13167,7 +13169,7 @@ table {
   transform: translate(-50%, -50%) scale(1);
 }
 .btn:hover:after {
-  background-image: url("../images/arrow-tail-white.svg");
+  background-position: 0 0.1rem;
 }
 .btn:hover {
   color: oklch(100% 0 0);
@@ -14241,6 +14243,7 @@ label textarea {
   background: url("../images/main-logo-gradient.svg"), linear-gradient(139.81deg, oklch(63.64% 0.127 277.55) 22.434%, oklch(73.43% 0.123 223.99) 113.926%);
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
   padding-top: 4.1875rem;
   padding-bottom: 5.375rem;
 }
@@ -15926,7 +15929,6 @@ label textarea {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 100%;
-  padding-bottom: 5rem;
   overflow: hidden;
 }
 .org_structure .treee .tree_first_inner {
@@ -16676,6 +16678,24 @@ label textarea {
   padding-bottom: 5rem;
 }
 
+.x_box:hover .x_circle {
+  width: 100%;
+  left: -30px;
+  top: -5px;
+  background-color: #2e5cdd;
+}
+
+.x_box:hover span {
+  -webkit-clip-path: circle(200px at 10px 50%) !important;
+  clip-path: circle(200px at 10px 50%) !important;
+  -webkit-clip-path: circle(200px at 10px calc(50% + 0px)) !important;
+  clip-path: circle(200px at 10px calc(50% + 0px)) !important;
+  -webkit-transition: 0.6s ease-in-out;
+  -o-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+  font-family: Gilroy;
+}
+
 .x_box {
   position: relative;
   display: -webkit-box;
@@ -16723,4 +16743,27 @@ label textarea {
   clip-path: circle(40px at 16px 50%);
   -webkit-clip-path: circle(40px at 16px calc(50% + 0px));
   clip-path: circle(40px at 16px calc(50% + 0px));
+}
+
+.x_box::before,
+.x_box span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Gilroy;
+}
+
+.x_box::before {
+  content: "Связаться с нами";
+  position: absolute;
+  z-index: 1px;
+  display: block;
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+  width: 100%;
+  top: 28px;
+  left: 24px;
+  opacity: 0.4;
+  text-align: left;
 }
