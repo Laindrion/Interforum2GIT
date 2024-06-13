@@ -13604,7 +13604,7 @@ label textarea {
 }
 
 .bouncing-blob--blue {
-  background: #4783c7;
+  background: linear-gradient(139.81deg, oklch(63.64% 0.127 277.55) 22.434%, oklch(73.43% 0.123 223.99) 113.926%);
 }
 
 .bouncing-blob--white {
@@ -13614,11 +13614,11 @@ label textarea {
 }
 
 .bouncing-blob--purple {
-  background: #8c8ff1;
+  background: linear-gradient(139.81deg, oklch(63.64% 0.127 277.55) 22.434%, oklch(73.43% 0.123 223.99) 113.926%);
 }
 
 .bouncing-blob--pink {
-  background: rgba(226, 137, 205, 0.3137254902);
+  background: linear-gradient(139.81deg, oklch(63.64% 0.127 277.55) 22.434%, oklch(73.43% 0.123 223.99) 113.926%);
 }
 
 .bouncing-blobs-container {
@@ -14542,9 +14542,17 @@ label textarea {
 .contacts {
   padding-top: 4.1875rem;
   padding-bottom: 5.6875rem;
-  background: linear-gradient(139.81deg, oklch(63.64% 0.127 277.55) 22.434%, oklch(73.43% 0.123 223.99) 113.926%);
+  /* background: $bg_gradient; */
   position: relative;
   z-index: 0;
+}
+.contacts iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 .contacts::before {
   z-index: -1;
@@ -14552,6 +14560,19 @@ label textarea {
   left: -4rem;
   -webkit-filter: blur(65px);
   filter: blur(65px);
+}
+.contacts::after {
+  content: "";
+  position: absolute;
+  width: 0rem;
+  height: 0rem;
+  background: linear-gradient(139.81deg, oklch(63.64% 0.127 277.55) 22.434%, oklch(73.43% 0.123 223.99) 113.926%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.8;
 }
 .contacts h2 {
   color: oklch(100% 0 0);
@@ -14611,6 +14632,9 @@ label textarea {
        LOCATION
     **********************
 **********************/
+.location {
+  display: none;
+}
 .location__wrapper {
   height: 33.125rem;
   overflow: hidden;
@@ -16693,7 +16717,6 @@ label textarea {
   -webkit-transition: 0.6s ease-in-out;
   -o-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
-  font-family: Gilroy;
 }
 
 .x_box {
@@ -16717,7 +16740,6 @@ label textarea {
 .x_circle {
   content: "";
   height: 80px;
-  font-family: Gilroy;
 }
 
 .x_circle {
@@ -16733,6 +16755,7 @@ label textarea {
   position: absolute;
   left: 0;
   top: 0;
+  opacity: 0.5;
 }
 
 .x_box span {
