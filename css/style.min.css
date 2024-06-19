@@ -13662,6 +13662,99 @@ label textarea {
     -webkit-backdrop-filter: blur(90px);
   }
 }
+.x_box:hover .x_circle {
+  width: 100%;
+  left: -30px;
+  top: -5px;
+  background-color: #2e5cdd;
+}
+
+.x_box:hover span {
+  -webkit-clip-path: circle(200px at 10px 50%) !important;
+  clip-path: circle(200px at 10px 50%) !important;
+  -webkit-clip-path: circle(200px at 10px calc(50% + 0px)) !important;
+  clip-path: circle(200px at 10px calc(50% + 0px)) !important;
+  -webkit-transition: 0.6s ease-in-out;
+  -o-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.x_box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 200px;
+  text-decoration: none !important;
+  z-index: 20;
+}
+
+.x_box,
+.x_circle {
+  content: "";
+  height: 80px;
+}
+
+.x_circle {
+  width: 80px;
+  background-color: #4961ff;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 2px 30px rgba(62, 174, 255, 0.3);
+  box-shadow: 0 2px 30px rgba(62, 174, 255, 0.3);
+  pointer-events: none;
+  -webkit-transition: width 0.6s, left 0.3s, top 0.3s, background-color 0.4s;
+  -o-transition: width 0.6s, left 0.3s, top 0.3s, background-color 0.4s;
+  transition: width 0.6s, left 0.3s, top 0.3s, background-color 0.4s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+}
+
+.x_box span {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  -webkit-clip-path: circle(40px at 16px 50%);
+  clip-path: circle(40px at 16px 50%);
+  -webkit-clip-path: circle(40px at 16px calc(50% + 0px));
+  clip-path: circle(40px at 16px calc(50% + 0px));
+}
+
+.x_box::before,
+.x_box span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Gilroy;
+}
+
+.x_box::before {
+  content: "Связаться с нами";
+  position: absolute;
+  z-index: 1px;
+  display: block;
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+  width: 100%;
+  top: 28px;
+  left: 24px;
+  opacity: 0.4;
+  text-align: left;
+}
+
+.x_box.second::before {
+  content: "О нас";
+}
+
 .footer {
   margin-top: auto;
   padding-top: 3.125rem;
@@ -16822,101 +16915,67 @@ label textarea {
     font-size: 9px;
   }
 }
-.btn__test-container {
-  background: oklch(0% 0 0);
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.x_box:hover .x_circle {
-  width: 100%;
-  left: -30px;
-  top: -5px;
-  background-color: #2e5cdd;
-}
-
-.x_box:hover span {
-  -webkit-clip-path: circle(200px at 10px 50%) !important;
-  clip-path: circle(200px at 10px 50%) !important;
-  -webkit-clip-path: circle(200px at 10px calc(50% + 0px)) !important;
-  clip-path: circle(200px at 10px calc(50% + 0px)) !important;
-  -webkit-transition: 0.6s ease-in-out;
-  -o-transition: 0.6s ease-in-out;
-  transition: 0.6s ease-in-out;
-}
-
-.x_box {
+.primary-button {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  overflow: hidden;
+  z-index: 0;
+  -webkit-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.primary-button:hover {
   cursor: pointer;
-  width: 200px;
-  text-decoration: none !important;
-  z-index: 20;
+  border-color: oklch(67.88% 0.117 248.92);
+  color: oklch(100% 0 0);
+  -webkit-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
 }
 
-.x_box,
-.x_circle {
-  content: "";
-  height: 80px;
-}
-
-.x_circle {
-  width: 80px;
-  background-color: #4961ff;
-  border-radius: 40px;
-  -webkit-box-shadow: 0 2px 30px rgba(62, 174, 255, 0.3);
-  box-shadow: 0 2px 30px rgba(62, 174, 255, 0.3);
-  pointer-events: none;
-  -webkit-transition: width 0.6s, left 0.3s, top 0.3s, background-color 0.4s;
-  -o-transition: width 0.6s, left 0.3s, top 0.3s, background-color 0.4s;
-  transition: width 0.6s, left 0.3s, top 0.3s, background-color 0.4s;
+.primary-button .round {
+  border-radius: 50%;
+  background-color: oklch(67.88% 0.117 248.92);
   position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.5;
+  top: 5px;
+  left: 10px;
+  z-index: -1;
+  -webkit-animation: scale-down 0.2s forwards;
+  animation: scale-down 0.2s forwards;
 }
 
-.x_box span {
-  -webkit-transform: translateX(24px);
-  -ms-transform: translateX(24px);
-  transform: translateX(24px);
-  -webkit-clip-path: circle(40px at 16px 50%);
-  clip-path: circle(40px at 16px 50%);
-  -webkit-clip-path: circle(40px at 16px calc(50% + 0px));
-  clip-path: circle(40px at 16px calc(50% + 0px));
+.primary-button.animate .round {
+  -webkit-animation: scale-up 1s forwards;
+  animation: scale-up 1s forwards;
 }
 
-.x_box::before,
-.x_box span {
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  font-family: Gilroy;
+@-webkit-keyframes scale-up {
+  to {
+    -webkit-transform: scale(600);
+    transform: scale(600);
+  }
 }
-
-.x_box::before {
-  content: "Связаться с нами";
-  position: absolute;
-  z-index: 1px;
-  display: block;
-  -webkit-transition: opacity 0.1s;
-  -o-transition: opacity 0.1s;
-  transition: opacity 0.1s;
-  width: 100%;
-  top: 28px;
-  left: 24px;
-  opacity: 0.4;
-  text-align: left;
+@keyframes scale-up {
+  to {
+    -webkit-transform: scale(600);
+    transform: scale(600);
+  }
 }
-
-.x_box.second::before {
-  content: "О нас";
+@-webkit-keyframes scale-down {
+  from {
+    -webkit-transform: scale(600);
+    transform: scale(600);
+  }
+  to {
+    ransform: scale(0);
+  }
+}
+@keyframes scale-down {
+  from {
+    -webkit-transform: scale(600);
+    transform: scale(600);
+  }
+  to {
+    ransform: scale(0);
+  }
 }
