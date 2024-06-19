@@ -13094,6 +13094,7 @@ table {
         VARIABLES
     **********************
 **********************/
+/* TEST */
 /**********************
     **********************
         MIXINS
@@ -13755,6 +13756,70 @@ label textarea {
   content: "О нас";
 }
 
+.primary-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  -webkit-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  border-color: oklch(67.88% 0.117 248.92);
+  color: oklch(100% 0 0);
+  -webkit-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.primary-button .round {
+  border-radius: 50%;
+  background-color: oklch(67.88% 0.117 248.92);
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: -1;
+  -webkit-animation: scale-down 0.2s forwards;
+  animation: scale-down 0.2s forwards;
+}
+
+.primary-button.animate .round {
+  -webkit-animation: scale-up 1s forwards;
+  animation: scale-up 1s forwards;
+}
+
+@-webkit-keyframes scale-up {
+  to {
+    -webkit-transform: scale(600);
+    transform: scale(600);
+  }
+}
+@keyframes scale-up {
+  to {
+    -webkit-transform: scale(600);
+    transform: scale(600);
+  }
+}
+@-webkit-keyframes scale-down {
+  from {
+    -webkit-transform: scale(600);
+    transform: scale(600);
+  }
+  to {
+    ransform: scale(0);
+  }
+}
+@keyframes scale-down {
+  from {
+    -webkit-transform: scale(600);
+    transform: scale(600);
+  }
+  to {
+    ransform: scale(0);
+  }
+}
 .footer {
   margin-top: auto;
   padding-top: 3.125rem;
@@ -16915,67 +16980,72 @@ label textarea {
     font-size: 9px;
   }
 }
-.primary-button {
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  -webkit-transition: color 0.4s;
-  -o-transition: color 0.4s;
-  transition: color 0.4s;
+/************************ 
+******************
+************
+    TEST
+************
+******************
+***********************/
+.menu__list-item:has(ul) > ul {
+  background: -o-linear-gradient(321.5deg, rgb(96, 86, 76) -9.275%, rgb(170, 177, 118) 105.504%);
+  background: linear-gradient(128.5deg, rgb(96, 86, 76) -9.275%, rgb(170, 177, 118) 105.504%);
 }
 
-.primary-button:hover {
-  cursor: pointer;
-  border-color: oklch(67.88% 0.117 248.92);
-  color: oklch(100% 0 0);
-  -webkit-transition: color 0.4s;
-  -o-transition: color 0.4s;
-  transition: color 0.4s;
+.main.olive .hero {
+  /* display: none; */
+  background: -o-linear-gradient(321.5deg, rgb(96, 86, 76) -9.275%, rgb(170, 177, 118) 105.504%);
+  background: linear-gradient(128.5deg, rgb(96, 86, 76) -9.275%, rgb(170, 177, 118) 105.504%);
+}
+.main.olive .hero::before {
+  content: none;
+}
+.main.olive .hero::after {
+  content: none;
+}
+.main.olive .hero__title::before {
+  content: none;
+}
+.main.olive .x_circle {
+  background: oklch(59.88% 0.023 119.23);
+}
+.main.olive .competition {
+  background: -o-linear-gradient(30.7deg, rgb(86, 86, 82) 16.28%, rgb(106, 110, 75) 119.935%);
+  background: linear-gradient(59.3deg, rgb(86, 86, 82) 16.28%, rgb(106, 110, 75) 119.935%);
+}
+.main.olive .about {
+  /*   background: $olive_light;
+  color: $white; */
+  /*   h2 {
+      color: $white;
+  }
+
+  p {
+      color: $white;
+  } */
+}
+.main.olive .about::before {
+  background: oklch(52.53% 0.052 113.5);
+}
+.main.olive .about::after {
+  background: oklch(52.53% 0.052 113.5);
+}
+.main.olive .about__img::before {
+  background: oklch(52.53% 0.052 113.5);
+}
+.main.olive .contacts {
+  background: -o-linear-gradient(320.89deg, rgb(106, 110, 75) -25.491%, rgb(86, 86, 82) 109.011%);
+  background: linear-gradient(129.11deg, rgb(106, 110, 75) -25.491%, rgb(86, 86, 82) 109.011%);
+}
+.main.olive .btn {
+  color: #6A6E4B;
+  border-color: #6A6E4B;
+}
+.main.olive .btn::before {
+  background: #6A6E4B;
 }
 
-.primary-button .round {
-  border-radius: 50%;
-  background-color: oklch(67.88% 0.117 248.92);
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  z-index: -1;
-  -webkit-animation: scale-down 0.2s forwards;
-  animation: scale-down 0.2s forwards;
-}
-
-.primary-button.animate .round {
-  -webkit-animation: scale-up 1s forwards;
-  animation: scale-up 1s forwards;
-}
-
-@-webkit-keyframes scale-up {
-  to {
-    -webkit-transform: scale(600);
-    transform: scale(600);
-  }
-}
-@keyframes scale-up {
-  to {
-    -webkit-transform: scale(600);
-    transform: scale(600);
-  }
-}
-@-webkit-keyframes scale-down {
-  from {
-    -webkit-transform: scale(600);
-    transform: scale(600);
-  }
-  to {
-    ransform: scale(0);
-  }
-}
-@keyframes scale-down {
-  from {
-    -webkit-transform: scale(600);
-    transform: scale(600);
-  }
-  to {
-    ransform: scale(0);
-  }
+.footer {
+  background: -o-linear-gradient(171.16deg, rgb(61, 93, 98) 33.287%, rgb(86, 86, 82) 121.463%);
+  background: linear-gradient(-81.16deg, rgb(61, 93, 98) 33.287%, rgb(86, 86, 82) 121.463%);
 }
