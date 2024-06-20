@@ -16988,14 +16988,25 @@ label textarea {
 ******************
 ***********************/
 .menu__list-item:has(ul) > ul {
-  background: -o-linear-gradient(321.5deg, rgb(96, 86, 76) -9.275%, rgb(170, 177, 118) 105.504%);
-  background: linear-gradient(128.5deg, rgb(96, 86, 76) -9.275%, rgb(170, 177, 118) 105.504%);
+  background: -o-linear-gradient(313.67deg, oklch(52.53% 0.052 113.5) 4.162%, oklch(73.95% 0.11 148.25) 89.623%);
+  background: linear-gradient(136.33deg, oklch(52.53% 0.052 113.5) 4.162%, oklch(73.95% 0.11 148.25) 89.623%);
+}
+
+.lan__link {
+  color: oklch(52.53% 0.052 113.5);
+}
+.lan__link::after {
+  background-image: url("../images/arrow-olive.svg");
+}
+
+.lan__inner > li > a {
+  color: oklch(52.53% 0.052 113.5);
 }
 
 .main.olive .hero {
   /* display: none; */
-  background: -o-linear-gradient(321.5deg, rgb(96, 86, 76) -9.275%, rgb(170, 177, 118) 105.504%);
-  background: linear-gradient(128.5deg, rgb(96, 86, 76) -9.275%, rgb(170, 177, 118) 105.504%);
+  background: -o-linear-gradient(313.67deg, oklch(52.53% 0.052 113.5) 4.162%, oklch(73.95% 0.11 148.25) 89.623%);
+  background: linear-gradient(136.33deg, oklch(52.53% 0.052 113.5) 4.162%, oklch(73.95% 0.11 148.25) 89.623%);
 }
 .main.olive .hero::before {
   content: none;
@@ -17006,12 +17017,11 @@ label textarea {
 .main.olive .hero__title::before {
   content: none;
 }
-.main.olive .x_circle {
-  background: oklch(59.88% 0.023 119.23);
+.main.olive .hero__about .x_circle {
+  background: oklch(0.5253 0.052 113.5);
 }
-.main.olive .competition {
-  background: -o-linear-gradient(30.7deg, rgb(86, 86, 82) 16.28%, rgb(106, 110, 75) 119.935%);
-  background: linear-gradient(59.3deg, rgb(86, 86, 82) 16.28%, rgb(106, 110, 75) 119.935%);
+.main.olive .x_circle {
+  background: oklch(70.78% 0.101 146.42);
 }
 .main.olive .about {
   /*   background: $olive_light;
@@ -17025,27 +17035,45 @@ label textarea {
   } */
 }
 .main.olive .about::before {
-  background: oklch(52.53% 0.052 113.5);
+  background: oklch(70.78% 0.101 146.42);
 }
 .main.olive .about::after {
-  background: oklch(52.53% 0.052 113.5);
+  background: oklch(70.78% 0.101 146.42);
 }
 .main.olive .about__img::before {
-  background: oklch(52.53% 0.052 113.5);
+  background: oklch(70.78% 0.101 146.42);
+}
+.main.olive .competition {
+  background: -o-linear-gradient(148.42deg, rgb(106, 110, 75) -14.394%, rgb(118, 178, 123) 95.837%);
+  background: linear-gradient(-58.42deg, rgb(106, 110, 75) -14.394%, rgb(118, 178, 123) 95.837%);
 }
 .main.olive .contacts {
-  background: -o-linear-gradient(320.89deg, rgb(106, 110, 75) -25.491%, rgb(86, 86, 82) 109.011%);
-  background: linear-gradient(129.11deg, rgb(106, 110, 75) -25.491%, rgb(86, 86, 82) 109.011%);
+  background: -o-linear-gradient(321.57deg, rgb(106, 110, 75) -29.126%, rgb(118, 178, 123) 87.643%);
+  background: linear-gradient(128.43deg, rgb(106, 110, 75) -29.126%, rgb(118, 178, 123) 87.643%);
 }
 .main.olive .btn {
-  color: #6A6E4B;
-  border-color: #6A6E4B;
+  color: oklch(52.53% 0.052 113.5);
+  border-color: oklch(52.53% 0.052 113.5);
 }
 .main.olive .btn::before {
-  background: #6A6E4B;
+  background: oklch(70.78% 0.101 146.42);
+}
+.main.olive .btn::after {
+  background: url("../images/arrow-tail-olive.svg");
+}
+.main.olive .btn:hover {
+  color: oklch(100% 0 0);
+  border-color: oklch(100% 0 0);
+}
+.main.olive .btn:hover::after {
+  -webkit-filter: brightness(3) contrast(40);
+  filter: brightness(3) contrast(40);
 }
 
 .footer {
-  background: -o-linear-gradient(171.16deg, rgb(61, 93, 98) 33.287%, rgb(86, 86, 82) 121.463%);
-  background: linear-gradient(-81.16deg, rgb(61, 93, 98) 33.287%, rgb(86, 86, 82) 121.463%);
+  background: -o-linear-gradient(150.98deg, rgb(106, 110, 75) -41.947%, rgb(117, 172, 119) 106.688%);
+  background: linear-gradient(-60.98deg, rgb(106, 110, 75) -41.947%, rgb(117, 172, 119) 106.688%);
+}
+.footer .footer__message a {
+  color: oklch(52.53% 0.052 113.5);
 }
