@@ -13458,6 +13458,9 @@ label textarea {
   line-height: 1.4375rem;
   color: oklch(100% 0 0);
 }
+label textarea {
+  height: 5rem;
+}
 
 .hidden {
   opacity: 0;
@@ -14461,6 +14464,9 @@ label textarea {
   margin-left: unset;
   margin-right: auto;
 }
+.competition .row:last-child {
+  margin-bottom: 0;
+}
 .competition .row:nth-child(1) {
   position: relative;
   z-index: 0;
@@ -14645,6 +14651,12 @@ label textarea {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  -webkit-transition: padding 0.4s;
+  -o-transition: padding 0.4s;
+  transition: padding 0.4s;
+}
+.news__item:hover .news__item-title {
+  /* padding-bottom: 1.1rem; */
 }
 
 /**********************
@@ -17009,7 +17021,14 @@ label textarea {
   background: linear-gradient(136.33deg, oklch(52.53% 0.052 113.5) 4.162%, oklch(73.95% 0.11 148.25) 89.623%);
 }
 .main.olive .hero::before {
-  content: none;
+  /* content: none; */
+  right: unset;
+  top: unset;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .main.olive .hero::after {
   content: none;
@@ -17050,6 +17069,9 @@ label textarea {
 .main.olive .contacts {
   background: -o-linear-gradient(321.57deg, rgb(106, 110, 75) -29.126%, rgb(118, 178, 123) 87.643%);
   background: linear-gradient(128.43deg, rgb(106, 110, 75) -29.126%, rgb(118, 178, 123) 87.643%);
+}
+.main.olive .contacts form button[type=submit] {
+  color: oklch(52.53% 0.052 113.5);
 }
 .main.olive .btn {
   color: oklch(52.53% 0.052 113.5);
