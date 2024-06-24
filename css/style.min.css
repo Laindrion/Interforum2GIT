@@ -13666,14 +13666,14 @@ label textarea {
     -webkit-backdrop-filter: blur(90px);
   }
 }
-.x_box:hover .x_circle {
+.circle__btn:hover .circle__inner {
   width: 100%;
   left: -30px;
   top: -5px;
   background-color: #2e5cdd;
 }
 
-.x_box:hover span {
+.circle__btn:hover span {
   -webkit-clip-path: circle(200px at 10px 50%) !important;
   clip-path: circle(200px at 10px 50%) !important;
   -webkit-clip-path: circle(200px at 10px calc(50% + 0px)) !important;
@@ -13683,7 +13683,7 @@ label textarea {
   transition: 0.6s ease-in-out;
 }
 
-.x_box {
+.circle__btn {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13700,13 +13700,13 @@ label textarea {
   z-index: 20;
 }
 
-.x_box,
-.x_circle {
+.circle__btn,
+.circle__inner {
   content: "";
   height: 80px;
 }
 
-.x_circle {
+.circle__inner {
   width: 80px;
   background-color: #4961ff;
   border-radius: 40px;
@@ -13722,7 +13722,7 @@ label textarea {
   opacity: 0.5;
 }
 
-.x_box span {
+.circle__btn span {
   -webkit-transform: translateX(24px);
   -ms-transform: translateX(24px);
   transform: translateX(24px);
@@ -13732,15 +13732,15 @@ label textarea {
   clip-path: circle(40px at 16px calc(50% + 0px));
 }
 
-.x_box::before,
-.x_box span {
+.circle__btn::before,
+.circle__btn span {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
   font-family: Gilroy;
 }
 
-.x_box::before {
+.circle__btn::before {
   content: "Связаться с нами";
   position: absolute;
   z-index: 1px;
@@ -13755,7 +13755,7 @@ label textarea {
   text-align: left;
 }
 
-.x_box.second::before {
+.circle__btn.second::before {
   content: "О нас";
 }
 
@@ -17094,10 +17094,10 @@ label textarea {
 .main.olive .hero__title::before {
   content: none;
 }
-.main.olive .hero__about .x_circle {
+.main.olive .hero__about .circle__inner {
   background: oklch(0.5253 0.052 113.5);
 }
-.main.olive .x_circle {
+.main.olive .circle__inner {
   background: oklch(70.78% 0.101 146.42);
 }
 .main.olive .about {
