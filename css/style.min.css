@@ -14570,15 +14570,15 @@ label textarea {
   height: 16.063rem;
   border-radius: 50%;
   background: oklch(93.1% 0 0);
-  -webkit-transition: scale 0.4s;
-  -o-transition: scale 0.4s;
-  transition: scale 0.4s;
+  -webkit-transition: scale 0.4s transform 1s;
+  -o-transition: scale 0.4s transform 1s;
+  transition: scale 0.4s transform 1s;
 }
 .subordinate__links a:hover {
   scale: 1.05;
-  -webkit-transition: scale 0.4s;
-  -o-transition: scale 0.4s;
-  transition: scale 0.4s;
+  -webkit-transition: scale 0.4s transform 1s;
+  -o-transition: scale 0.4s transform 1s;
+  transition: scale 0.4s transform 1s;
 }
 .subordinate__links a.hidden:nth-child(odd) {
   -webkit-transform: translateY(-100%);
@@ -16536,6 +16536,7 @@ label textarea {
        GALLERY
     **********************
 **********************/
+/* First verison */
 .gallery {
   padding-bottom: 8.625rem;
 }
@@ -16595,6 +16596,7 @@ label textarea {
   height: 100%;
 }
 
+/* Second version */
 /**********************
     **********************
        FOOTER
