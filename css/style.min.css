@@ -13291,7 +13291,7 @@ h2 {
   position: absolute;
   width: 7.375rem;
   height: 7.6875rem;
-  background: oklch(65.87% 0.118 261.78);
+  background: oklch(21.61% 0.1006 265.27);
   border-radius: 50%;
 }
 
@@ -13708,9 +13708,7 @@ label textarea {
 }
 
 .circle__btn:hover span {
-  -webkit-clip-path: circle(200px at 10px 50%) !important;
   clip-path: circle(200px at 10px 50%) !important;
-  -webkit-clip-path: circle(200px at 10px calc(50% + 0px)) !important;
   clip-path: circle(200px at 10px calc(50% + 0px)) !important;
   -webkit-transition: 0.6s ease-in-out;
   -o-transition: 0.6s ease-in-out;
@@ -13760,9 +13758,7 @@ label textarea {
   -webkit-transform: translateX(24px);
   -ms-transform: translateX(24px);
   transform: translateX(24px);
-  -webkit-clip-path: circle(40px at 16px 50%);
   clip-path: circle(40px at 16px 50%);
-  -webkit-clip-path: circle(40px at 16px calc(50% + 0px));
   clip-path: circle(40px at 16px calc(50% + 0px));
 }
 
@@ -14689,6 +14685,8 @@ label textarea {
   mask-position: top center;
   -webkit-mask-image: url("../images/oval.svg");
   mask-image: url("../images/oval.svg");
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .news-child-footer-meta {
@@ -17192,6 +17190,10 @@ label textarea {
   html.open .header.secondary {
     z-index: unset;
   }
+  .logo {
+    height: 65px;
+    width: 115px;
+  }
   .menu {
     padding: 1.625rem 0;
   }
@@ -17326,7 +17328,7 @@ label textarea {
   }
   .about__img {
     max-width: 100%;
-    height: 24.125rem;
+    /*  height: 24.125rem; */
   }
   .competition .row:nth-child(even) img {
     display: block;
@@ -17362,6 +17364,7 @@ label textarea {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    opacity: 0.2;
   }
   .contacts .row {
     row-gap: 2rem;
