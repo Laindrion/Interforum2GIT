@@ -6,815 +6,537 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="css/style.min.css">
+   <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+   <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+   <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+   <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 </head>
 
 <body>
-   <header class="header">
-      <div class="container">
-         <nav class="menu__top">
+   <header class="header other">
+      <!--  <div class="container"> -->
+      <nav class="menu">
+         <a class="logo other" href="index.html">
+            <img src="images/logo.svg" alt="logo image">
+         </a>
+         <ul class="menu__list">
+            <a class="close" href="#">
 
-         </nav>
-
-         <nav class="menu">
-            <a class="logo" href="index.html">
-               <!--  <img src="images/logo.svg" alt="logo image"> -->
             </a>
-            <ul class="menu__list">
-               <a class="close" href="#">
-
+            <li class="menu__list-item">
+               <a href="#" class="menu__list-link">
+                  О нас
                </a>
-               <li class="menu__list-item">
-                  <a href="#" class="menu__list-link">
-                     О нас
+
+               <ul>
+                  <li>
+                     <a href="#">
+                        Общая информация
+                     </a>
+                  </li>
+                  <li>
+                     <a href="organisation_structure.html">
+                        Организационная Структура
+                     </a>
+                  </li>
+                  <li>
+                     <a href="management.html">
+                        Руководство
+                     </a>
+                  </li>
+                  <li>
+                     <a href="faq.html">
+                        FAQ
+                     </a>
+                  </li>
+                  <li>
+                     <a href="contacts.html">
+                        Контакты
+                     </a>
+                  </li>
+               </ul>
+            </li>
+            <li class="menu__list-item">
+               <a href="about_uzbekistan.html" class="menu__list-link">
+                  Об Узбекистане
+               </a>
+            </li>
+            <li class="menu__list-item">
+               <a href="#" class="menu__list-link">
+                  Для СМИ
+               </a>
+
+               <ul>
+                  <li>
+                     <a href="#">
+                        Правила аккредитации
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        Политика Упоминаний
+                     </a>
+                  </li>
+               </ul>
+            </li>
+            <li class="menu__list-item">
+               <a href="gallery.html" class="menu__list-link">
+                  Галерея
+               </a>
+            </li>
+            <li class="menu__list-item">
+               <a href="news.html" class="menu__list-link">
+                  Новости
+               </a>
+            </li>
+            <li class="menu__list-item">
+               <a href="events_main.html" class="menu__list-link">
+                  Мероприятия
+               </a>
+            </li>
+         </ul>
+
+         <div class="menu__list-inner">
+            <ul class="lan">
+               <li>
+                  <a class="lan__link" href="#">
+                     RU
                   </a>
 
-                  <ul>
+                  <ul class="lan__inner">
                      <li>
                         <a href="#">
-                           Общая информация
+                           ENG
                         </a>
                      </li>
                      <li>
-                        <a href="organisation_structure.html">
-                           Организационная Структура
-                        </a>
-                     </li>
-                     <li>
-                        <a href="management.html">
-                           Руководство
-                        </a>
-                     </li>
-                     <li>
-                        <a href="faq.html">
-                           FAQ
-                        </a>
-                     </li>
-                     <li>
-                        <a href="contacts.html">
-                           Контакты
+                        <a href="#">
+                           UZB
                         </a>
                      </li>
                   </ul>
-               </li>
-               <li class="menu__list-item">
-                  <a href="about_uzbekistan.html" class="menu__list-link">
-                     Об Узбекистане
-                  </a>
-               </li>
-               <li class="menu__list-item">
-                  <a href="#" class="menu__list-link">
-                     Для СМИ
-                  </a>
-
-                  <ul>
-                     <li>
-                        <a href="#">
-                           Правила аккредитации
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#">
-                           Политика Упоминаний
-                        </a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="menu__list-item">
-                  <a href="gallery.html" class="menu__list-link">
-                     Галерея
-                  </a>
-               </li>
-               <li class="menu__list-item">
-                  <a href="news.html" class="menu__list-link">
-                     Новости
-                  </a>
                </li>
             </ul>
 
-            <div class="menu__list-inner">
-               <ul class="lan">
-                  <li>
-                     <a class="lan__link" href="#">
-                        RU
-                     </a>
-
-                     <ul class="lan__inner">
-                        <li>
-                           <a href="#">
-                              ENG
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              UZB
-                           </a>
-                        </li>
-                     </ul>
-                  </li>
-               </ul>
-
-               <button class="burger__btn" href="#">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-               </button>
-            </div>
-         </nav>
-      </div>
+            <button class="burger__btn" href="#">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+         </div>
+      </nav>
+      <!--   </div> -->
    </header>
-
-   <!--     <header class="header" id="header">
-        <div class="header__top">
-
-            <nav class="navbar__top">
-                <div class="container">
-                    <div class="navbar__top-wrapper">
-
-                        <a class="logo logo-miit" href="index.html">
-                            <img src="images/logo-miit-ru.svg" alt="logo">
-                        </a>
-
-                        <div class="navbar__top-item">
-                            <a class="navbar__top-suptitle" href="helpline.html">
-                                Телефон доверия:
-                            </a>
-                            <a class="navbar__top-item-phone" href="tel:998712385005">
-                                +998 (71) 238-50-05
-                            </a>
-                        </div>
-
-                        <div class="navbar__top-item">
-                            <span class="navbar__top-suptitle">
-                                Телефон министерства:
-                            </span>
-                            <a class="navbar__top-item-phone" href="tel:998712440143">
-                                +998 (71) 238-50-00
-                            </a>
-                        </div>
-
-
-                        <div class="navbar__top-item lang">
-                            <span class="navbar__top-suptitle">
-                                Язык:
-                            </span>
-                            <span class="navbar__top-item-lang" href="#">
-                                RU
-                                <span class="navbar__top-item-lang__inner" id="navbar-top-item-lang-inner">
-                                    <a href="#">
-                                        ENG
-                                    </a>
-                                    <a href="#">
-                                        UZB
-                                    </a>
-                                </span>
-                            </span>
-                        </div>
-
-                        <div class="navbar__interactions mobile">
-                            <a class="navbar__font-size" href="#">
-                                <img src="images/glasses-dark.svg" alt="">
-                                <ul>
-                                    <li id="fonts-plus">
-                                        A+
-                                    </li>
-                                    <li id="fonts-standart">
-                                        A
-                                    </li>
-                                    <li id="fonts-minus">
-                                        A-
-                                    </li>
-                                    <li id="color">
-                                        <img src="" alt="">
-                                    </li>
-                                </ul>
-                            </a>
-                            <a href="#">
-                                <img src="images/sound-dark.svg" alt="">
-                            </a>
-                        </div>
-
-                        <a class="logo__member" href="#">
-                            <img src="images/ICCA_Member_Colour_A.png" alt="">
-                        </a>
-                    </div>
-                </div>
-            </nav>
-
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar__wrapper">
-                        <div class="navbar__interactions">
-                            <a class="logo" href="index.html">
-                                <img src="images/logo-interforum.png" alt="logo">
-                                <img src="images/logo-text.svg" alt="logo">
-                            </a>
-                            <a class="navbar__font-size" href="#">
-                                <img src="images/glasses.svg" alt="">
-
-
-                                <ul>
-                                    <li id="fonts-plus">
-                                        A+
-                                    </li>
-                                    <li id="fonts-standart">
-                                        A
-                                    </li>
-                                    <li id="fonts-minus">
-                                        A-
-                                    </li>
-                                    <li id="color">
-                                        <img src="" alt="">
-                                    </li>
-                                </ul>
-                            </a>
-                            <a href="#">
-                                <img src="images/sound.svg" alt="">
-                            </a>
-                        </div>
-
-
-                        <div class="navbar__inner">
-                            <ul class="menu__list">
-                                <li class="menu__list-item">
-                                    <a class="menu__list-link" href="#">
-                                        О нас
-                                    </a>
-
-                                    <ul class="menu__list-dropdown">
-                                        <li>
-                                            <a href="#">
-                                                Общая информция
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Организационная Структура
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Руководство
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                География
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                FAQ
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Контакты
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="menu__list-item">
-                                    <a class="menu__list-link" href="#">
-                                        Сотрудничество
-                                    </a>
-                                </li>
-                                <li class="menu__list-item">
-                                    <a class="menu__list-link" href="#">
-                                        Для СМИ
-                                    </a>
-
-                                    <ul class="menu__list-dropdown">
-                                        <li>
-                                            <a href="#">
-                                                Пресс-Мероприятия
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Правила аккредитации
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Политика Упоминаний
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu__list-item">
-                                    <a class="menu__list-link" href="#">
-                                        Галерея
-                                    </a>
-                                </li>
-                                <li class="menu__list-item">
-                                    <a class="menu__list-link" href="#">
-                                        Новости
-                                    </a>
-                                </li>
-                                <li class="menu__list-item">
-                                    <a class="menu__list-link" href="#">
-                                        Об Узбекистане
-                                    </a>
-                                </li>
-                            </ul>
-
-                            <div class="navbar__inner-items">
-                                <div id="navbar-search">
-                                    <input type="text" placeholder="Поиск...">
-                                    <button id="search">
-                                        <img src="images/search-header.svg" alt="">
-                                    </button>
-                                    <button id="close-search">
-                                        <img src="images/close-header.svg" alt="">
-                                    </button>
-                                </div>
-                                <a class="navbar__inner-item" id="header-search" href="#">
-                                    <img src="images/search.svg" alt="">
-                                </a>
-                                <a class="navbar__inner-item" href="#" id="burger-menu">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </a>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </nav>
-
-        </div>
-
-        <nav class="burger__navbar">
-            <div class="container">
-                <div class="burger__navbar-wrapper">
-                    <ul>
-                        <li>
-                            <a class="burger__navbar-link tab-link" href="#">
-                                О нас
-                            </a>
-                            <ul class="tab-content">
-                                <li>
-                                    <a href="#">
-                                        Общая информация
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        Организационная Структура
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        Руководство
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        География
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        FAQ
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        Контакты
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a class="burger__navbar-link tab-link" href="#">
-                                Мероприятия
-                            </a>
-                            <ul class="tab-content">
-                                <li>
-                                    <a href="#">
-                                        Общая информация
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        Организационная Структура
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        Руководство
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        География
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        FAQ
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        Контакты
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="burger__navbar-link tab-link" href="#">
-                                Сотрудничество
-                            </a>
-                            <ul class="tab-content">
-                                <li>
-                                    <a href="#">
-                                        Общая информация
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        Организационная Структура
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        Руководство
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        География
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        FAQ
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        Контакты
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="burger__navbar-link" href="#">
-                                Для СМИ
-                            </a>
-                        </li>
-                        <li>
-                            <a class="burger__navbar-link" href="#">
-                                Галерея
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="burger__navbar-link" href="#">
-                                Новости
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="burger__navbar-link" href="#">
-                                Открытые данные
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="burger-menu-close">
-                    <img src="images/close.svg" alt="">
-                </div>
-            </div>
-        </nav>
-    </header> -->
-
 <main class="main">
 
-    <!--******* HERO *******-->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__wrapper">
-                <div class="hero__info hidden">
-                    <h1 class="hero__title title">
-                        организация и проведение международных мероприятий
-                    </h1>
-                    <a href="#" class="circle__btn">
-                        <div class="circle__inner"></div>
-                        <span class="circle__mask">Связаться с
-                            нами</span>
-                    </a>
-                </div>
-                <div class="hero__image hidden">
-                    <!--   <img src="images/main-logo.svg" alt="logo"> -->
-
-                    <video autoplay muted inline style="width: 200px; height: 100%;">
-                        <source src="{{ asset('themes/images/logo.mp4') }}" type="video/mp4">
-                        <source src="{{ asset('themes/images/logo-reveal.mov') }}">
-                    </video>
-                </div>
-                <div class="hero__about hidden">
-                    <p>
-                        Мы команда специалистов, занимающихся полномасштабной разработкой и реализацией проектов по
-                        проведению мероприятий высокого уровня
-                    </p>
-                    <a href="#" class="circle__btn second">
-                        <div class="circle__inner"></div>
-                        <span class="circle__mask">О нас</span>
-                    </a>
-                </div>
+   <!--******* HERO *******-->
+   <section class="hero">
+      <div class="hero__slider">
+         <div class="hero__slider-item">
+            <div class="iframe-video">
+               <iframe
+                  src="https://www.youtube.com/embed/L4d-q14uQi8?autoplay=1&mute=1&controls=0&loop=1&playlist=L4d-q14uQi8&modestbranding=1&showinfo=0&rel=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-        </div>
-    </section>
+            <!-- ?vq=hd720 -->
+            <!-- <div class="container"> -->
+            <div class="hero__content">
+               <h1 class="hero__title">
+                  Всемирная туристская организация (ЮНВТО)
+               </h1>
 
-    <!--******* ABOUT *******-->
-    <section class="about">
-        <div class="container">
-            <div class="about__wrapper">
-                <h2 class="hidden">
-                    «InterForum» - это команда специалистов, занимающихся реализацией проектов
-                </h2>
+               <p class="hero__text">
+                  Какой то длинный текст который должен совмещать не только культуру и наследие Китайской власти, не
+                  и
+                  её
+                  вооружение против Американцев
+               </p>
 
-                <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <div class="about__img hidden">
-                            <img src="images/image-example.jpg" alt="about image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about__item hidden">
-                            <p>
-                                «InterForum» - это команда специалистов, занимающихся полномасштабной разработкой и
-                                реализацией проектов по проведению мероприятий высокого уровня, использующих в работе
-                                современные технические возможности, оригинальные идеи и ключевые тренды индустрии
-                                проведения мероприятий.
-                                <br>
-                                Каждый новый проект требует креативный подход, специальное качественно новое решение.
-                                Команда постоянно совершенствует стандарты своей работы, что с каждым разом делает новые
-                                проекты все более эффективными.
-                                <br>
-                                За недолгий период существования компания стала организатором и оператором многих
-                                международных форумов и мероприятий, ярких и успешных проектов разной степени сложности.
-                                <br>
-                                Мы всегда открыты к сотрудничеству, готовы предложить свои идеи по организации и
-                                проведению мероприятий на самом высоком уровне.
-                                <br>
-                                Каждый проект «InterForum» – это всегда новые решения.
-                            </p>
-                            <a href="#" class="circle__btn third" data-contact="Contact us">
-                                <div class="circle__inner"></div>
-                                <span class="circle__mask">Подробнее</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+               <a class="circle__btn" href="#">
+                  К мероприятию
+                  <div class="circle__inner"></div>
+                  <span class="circle__mask"></span>
+               </a>
+               <!-- </div> -->
             </div>
-        </div>
-    </section>
+         </div>
 
-    <!--******* COMPETITION *******-->
-    <section class="competition">
-        <div class="container">
+
+         <div class="hero__slider-item">
+            <div class="iframe-video">
+               <iframe
+                  src="https://www.youtube.com/embed/L4d-q14uQi8?autoplay=1&mute=1&controls=0&loop=1&playlist=L4d-q14uQi8&modestbranding=1&showinfo=0&rel=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <!-- ?vq=hd720 -->
+            <!-- <div class="container"> -->
+            <div class="hero__content">
+               <h1 class="hero__title">
+                  Рихстилла акани тайтили
+               </h1>
+
+               <p class="hero__text">
+                  Какой то длинный текст который должен совмещать не только культуру и наследие Китайской власти, не
+                  и
+                  её
+                  вооружение против Американцев
+               </p>
+
+               <a class="circle__btn" href="#">
+                  К мероприятию
+                  <div class="circle__inner"></div>
+                  <span class="circle__mask"></span>
+               </a>
+               <!-- </div> -->
+            </div>
+         </div>
+      </div>
+
+      <div class="hero__arrows">
+         <button class="hero__arrows-left">
+            <img src="images/arrow-triangle.svg" alt="">
+         </button>
+
+         <button class="hero__arrows-right">
+            <img src="images/arrow-triangle.svg" alt="">
+         </button>
+      </div>
+   </section>
+
+   <!--******* ABOUT *******-->
+   <section class="about">
+      <div class="container">
+         <div class="about__wrapper">
             <h2 class="hidden">
-                НАШИ КОМПЕТЕНЦИИ
-            </h2>
-            <div class="competition__wrapper">
-
-                <!-- First block -->
-                <div class="row">
-                    <div class="col-lg-6 col-12 hidden">
-                        <h3 class="background__title">
-                            Организация и проведение международных конгрессно-выставочных мероприятий.
-                        </h3>
-                        <p>
-                            InterForum» - это команда специалистов, занимающихся полномасштабной разработкой и
-                            реализацией
-                            проектов по проведению мероприятий высокого уровня, использующих в работе современные
-                            технические
-                            возможности, оригинальные идеи и ключевые тренды индустрии проведения мероприятий.
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-12 hidden">
-                        <img src="images/image-example.jpg" alt="competition image">
-                    </div>
-                </div>
-                <!-- Second  block -->
-                <div class="row">
-                    <div class="col-lg-6 col-12 hidden">
-                        <img src="images/image-example2.jpg" alt="competition image">
-                    </div>
-                    <div class="col-lg-6 col-12 hidden">
-                        <h3 class="background__title">
-                            Обеспечение информационного сопровождения мероприятий
-                        </h3>
-                        <p>
-                            InterForum» - это команда специалистов, занимающихся полномасштабной разработкой и
-                            реализацией
-                            проектов по проведению мероприятий высокого уровня, использующих в работе современные
-                            технические
-                            возможности, оригинальные идеи и ключевые тренды индустрии проведения мероприятий.
-                        </p>
-                    </div>
-                </div>
-                <!-- Third  block -->
-                <div class="row">
-                    <div class="col-lg-6 col-12 hidden">
-                        <h3 class="background__title">
-                            организация эффективной коммуникации с зарубежными партнерами
-                        </h3>
-                        <p>
-                            InterForum» - это команда специалистов, занимающихся полномасштабной разработкой и
-                            реализацией
-                            проектов по проведению мероприятий высокого уровня, использующих в работе современные
-                            технические
-                            возможности, оригинальные идеи и ключевые тренды индустрии проведения мероприятий.
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-12 hidden">
-                        <img src="images/image-example3.jpg" alt="competition image">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!--******* SUBORDINATE *******-->
-    <section class="subordinate">
-        <div class="container">
-            <h2 class="hidden">
-                ПОДВЕДОМСТВЕННЫЕ ОРГАНИЗАЦИИ
-            </h2>
-            <div class="subordinate__links">
-                <a class="hidden" href="#">
-                    <img src="images/subordinate-1.png" alt="logo of subordinate">
-                </a>
-                <a class="hidden" href="#">
-                    <img src="images/subordinate-2.png" alt="logo of subordinate">
-                </a>
-            </div>
-
-            <h2 class="news__title hidden">
-                Новости
-            </h2>
-        </div>
-    </section>
-
-    <section class="news">
-        <div class="news__wrapper">
-            <a href="#" class="news__item">
-                <img src="images/news-1.png" alt="news image">
-                <h4 class="news__item-title">
-                    Организация и проведение международных конгрессно-выставочных мероприятий.
-                </h4>
-            </a>
-            <a href="#" class="news__item">
-                <img src="images/news-2.png" alt="news image">
-                <h4 class="news__item-title">
-                    Организация и проведение международных конгрессно-выставочных мероприятий.
-                </h4>
-            </a>
-            <a href="#" class="news__item">
-                <img src="images/news-3.png" alt="news image">
-                <h4 class="news__item-title">
-                    Шавкат Мирзиёев обозначил четыре приоритетных направления для Совета иностранных инвесторов
-                    Шавкат Мирзиёев обозначил четыре приоритетных направления для Совета иностранных инвесторов
-                </h4>
-            </a>
-            <a href="#" class="news__item">
-                <img src="images/news-4.png" alt="news image">
-                <h4 class="news__item-title">
-                    Организация и проведение международных конгрессно-выставочных мероприятий.
-                </h4>
-            </a>
-            <a href="#" class="news__item">
-                <img src="images/news-5.jpg" alt="news image">
-                <h4 class="news__item-title">
-                    Организация и проведение международных конгрессно-выставочных мероприятий.
-                </h4>
-            </a>
-            <a href="#" class="news__item">
-                <img src="images/news-6.png" alt="news image">
-                <h4 class="news__item-title">
-                    Организация и проведение международных конгрессно-выставочных мероприятий.
-                </h4>
-            </a>
-            <a href="#" class="news__item">
-                <img src="images/news-7.png" alt="news image">
-                <h4 class="news__item-title">
-                    Организация и проведение международных конгрессно-выставочных мероприятий.
-                </h4>
-            </a>
-            <a href="#" class="news__item">
-                <img src="images/news-8.png" alt="news image">
-                <h4 class="news__item-title">
-                    Организация и проведение международных конгрессно-выставочных мероприятий.
-                </h4>
-            </a>
-        </div>
-    </section>
-
-    <section class="contacts">
-
-        <!--       <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11982.753648588314!2d69.2822592!3d41.3373884!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bb1449ce571%3A0x9e652a244ad74f6f!2z0JPQo9CfICJJbnRlcmZvcnVtIg!5e0!3m2!1sru!2s"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-
-        <div class="container">
-            <h2>
-                кОНТАКТЫ
+               «InterForum» - это команда специалистов, занимающихся реализацией проектов
             </h2>
 
             <div class="row">
-                <div class="col-lg-4 col-12">
-                    <div class="contacts__info">
-                        <a class="mail" href="mailto:info@interforum.uz">
-                            <span>Электронная почта</span>
-                            info@interforum.uz
-                        </a>
-                        <a class="phone" href="tel:998712385767">
-                            <span>Номер телефона</span>
-                            +998 71 238 57 67
-                        </a>
-                        <a class="adress" href="#">
-                            <span>Адрес</span>
-                            ул.Амира Темура 107Б
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-12">
-                    <div class="contacts__main-logo">
-                        <img src="images/main-logo.svg" alt="logo">
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-12">
-                    <form action="https://interforum.uz/contacts-create" method="POST">
-                        <!-- <input type="hidden" name="_token" value="YDZ8diLDnnpTHpIMF54zyUEjam7WQAJxvXQjQwTo"> -->
-                        <label for="name">
-                            Ваше имя*
-                            <input type="text" id="name">
-                        </label>
-                        <label for="phone">
-                            НОМЕР ТЕЛЕФОНА*
-                            <input type="phone" id="phone">
-                        </label>
-                        <label for="message">
-                            СООБЩЕНИЕ
-                            <textarea name="" id="message"></textarea>
-                        </label>
-
-                        <button type="submit">
-                            Оставить заявку
-                        </button>
-                    </form>
-                </div>
+               <div class="col-lg-6 col-12">
+                  <div class="about__img hidden">
+                     <img src="images/image-example.jpg" alt="about image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="about__item hidden">
+                     <p>
+                        «InterForum» - это команда специалистов, занимающихся полномасштабной разработкой и
+                        реализацией проектов по проведению мероприятий высокого уровня, использующих в работе
+                        современные технические возможности, оригинальные идеи и ключевые тренды индустрии
+                        проведения мероприятий.
+                        <br>
+                        Каждый новый проект требует креативный подход, специальное качественно новое решение.
+                        Команда постоянно совершенствует стандарты своей работы, что с каждым разом делает новые
+                        проекты все более эффективными.
+                        <br>
+                        За недолгий период существования компания стала организатором и оператором многих
+                        международных форумов и мероприятий, ярких и успешных проектов разной степени сложности.
+                        <br>
+                        Мы всегда открыты к сотрудничеству, готовы предложить свои идеи по организации и
+                        проведению мероприятий на самом высоком уровне.
+                        <br>
+                        Каждый проект «InterForum» – это всегда новые решения.
+                     </p>
+                     <a href="#" class="circle__btn third" data-contact="Contact us">
+                        <div class="circle__inner"></div>
+                        <span class="circle__mask">Подробнее</span>
+                     </a>
+                  </div>
+               </div>
             </div>
-        </div>
-    </section>
 
-    <section class="location">
-        <div class="location__wrapper">
-            <div class="location__inner">
-                <a class="location__info" href="#">
-                    <span href="#">
-                        <span>
-                            Адрес
-                        </span>
-                        ул.Амира Темура 107Б
-                    </span>
-                </a>
-                <a class="location__img" href="#">
-                    <img src="images/location.svg" alt="">
-                </a>
+         </div>
+      </div>
+   </section>
+
+   <!--******* MAP *******-->
+   <section class="map">
+      <div id="cityModal" class="modal">
+         <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-header">
+               <h2 id="modalTitle"></h2>
             </div>
-        </div>
-    </section>
+            <p id="modalInfo"></p>
+         </div>
+      </div>
+      <div class="map__wrapper">
+         <div id="chartdiv"></div>
+         <div class="map__sidebar">
+            <h2 class="map__sidebar-title title">
+               Наши заслуги:
+            </h2>
+            <div class="map__sidebar-item">
+               <h3>
+                  Проведено мероприятий:
+               </h3>
+               <span class="time">
+                  156
+               </span>
+            </div>
 
-    <section class="links">
-       <!--  <div class="bouncing-blobs-container">
+            <div class="map__sidebar-item">
+               <h3>
+                  Количество участников (страны):
+               </h3>
+               <span class="time">
+                  98
+               </span>
+            </div>
+
+            <div class="map__sidebar-item">
+               <h3>
+                  Количество участников (человек):
+               </h3>
+               <span class="time">
+                  100000
+               </span>
+            </div>
+
+            <div class="map__sidebar-item">
+               <h3>
+                  Количество подписчиков:
+               </h3>
+               <span class="time">
+                  100000
+               </span>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!--******* IMPORTANT EVENTS *******-->
+   <section class="important-events">
+      <div class="important-events__sticky">
+         <h2 class="important-events__title title">
+            Наши значимые проекты:
+         </h2>
+      </div>
+
+      <div class="important-events__container">
+         <div class="important-events__inner">
+            <a class="important-events__item hidden " href="#">
+               <img src="images/SHOS.png" alt="Logo">
+               <h3>
+                  XIX Совещание Председателей Верховных Судов Государств-членов Шанхайской Организации Сотрудничества
+                  (Ташкент 2024 год)
+               </h3>
+            </a>
+
+            <a class="important-events__item hidden " href="#">
+               <img src="images/TMIF.png" alt="Logo">
+               <h3>
+                  Ташкентский международный инвестиционный форум (2022, 2023, 2024, 2025)
+               </h3>
+            </a>
+
+            <a class="important-events__item hidden " href="#">
+               <img src="images/icfs.png" alt="Logo">
+               <h3>
+                  Международная конференция по продовольственной безопасности (ФАО, Самарканд 2023 год)
+               </h3>
+            </a>
+
+            <a class="important-events__item hidden " href="#">
+               <img src="images/innoprom.png" alt="Logo">
+               <h3>
+                  Международная Промышленная Выставка "Иннопром. Центральная Азия". (Ташкент 2021, 2022, 2023, 2024,
+                  2025)
+               </h3>
+            </a>
+         </div>
+
+         <div class="important-events__inner">
+            <a class="important-events__item hidden " href="#">
+               <img src="images/AM23.svg" alt="Logo">
+               <h3>
+                  32-е Ежегодное заседание Совета управляющих Европейского банка реконструкции и развития (Самарканд,
+                  2023 год, более 2500 делегатов)
+               </h3>
+            </a>
+
+            <a class="important-events__item hidden " href="#">
+               <img src="images/AIIB.png" alt="Logo">
+               <h3>
+                  IX Ежегодное заседание Совета управляющих Азиатского банка инфраструктурных инвестиций (Самарканд,
+                  2024 год)
+               </h3>
+            </a>
+
+            <a class="important-events__item hidden " href="#">
+               <img src="images/unwto.png" alt="Logo">
+               <h3>
+                  25-я Юбилейная сессия Генеральной ассамблеи Всемирной туристической организации (UNWTO, Самарканд
+                  2023 года)
+               </h3>
+            </a>
+
+            <a class="important-events__item hidden" href="#">
+               <img src="images/annual-islamic-meeting-2021.png" alt="Logo">
+               <h3>
+                  46-е Ежегодное заседание Совета Управляющих Исламского банка развития (ИБР, Ташкент, 2021год, более
+                  2000 делегатов)
+               </h3>
+            </a>
+         </div>
+      </div>
+   </section>
+
+   <!--******* SUBORDINATE *******-->
+   <section class="subordinate">
+      <div class="container">
+         <h2 class="hidden">
+            ПОДВЕДОМСТВЕННЫЕ ОРГАНИЗАЦИИ
+         </h2>
+         <div class="subordinate__links">
+            <a class="hidden" href="#">
+               <img src="images/subordinate-1.png" alt="logo of subordinate">
+            </a>
+            <a class="hidden" href="#">
+               <img src="images/subordinate-2.png" alt="logo of subordinate">
+            </a>
+         </div>
+
+         <h2 class="news__title hidden">
+            Новости
+         </h2>
+      </div>
+   </section>
+
+   <section class="news">
+      <div class="news__wrapper">
+         <a href="#" class="news__item">
+            <img src="images/news-1.png" alt="news image">
+            <h4 class="news__item-title">
+               Организация и проведение международных конгрессно-выставочных мероприятий.
+            </h4>
+         </a>
+         <a href="#" class="news__item">
+            <img src="images/news-2.png" alt="news image">
+            <h4 class="news__item-title">
+               Организация и проведение международных конгрессно-выставочных мероприятий.
+            </h4>
+         </a>
+         <a href="#" class="news__item">
+            <img src="images/news-3.png" alt="news image">
+            <h4 class="news__item-title">
+               Шавкат Мирзиёев обозначил четыре приоритетных направления для Совета иностранных инвесторов
+               Шавкат Мирзиёев обозначил четыре приоритетных направления для Совета иностранных инвесторов
+            </h4>
+         </a>
+         <a href="#" class="news__item">
+            <img src="images/news-4.png" alt="news image">
+            <h4 class="news__item-title">
+               Организация и проведение международных конгрессно-выставочных мероприятий.
+            </h4>
+         </a>
+         <a href="#" class="news__item">
+            <img src="images/news-5.jpg" alt="news image">
+            <h4 class="news__item-title">
+               Организация и проведение международных конгрессно-выставочных мероприятий.
+            </h4>
+         </a>
+         <a href="#" class="news__item">
+            <img src="images/news-6.png" alt="news image">
+            <h4 class="news__item-title">
+               Организация и проведение международных конгрессно-выставочных мероприятий.
+            </h4>
+         </a>
+         <a href="#" class="news__item">
+            <img src="images/news-7.png" alt="news image">
+            <h4 class="news__item-title">
+               Организация и проведение международных конгрессно-выставочных мероприятий.
+            </h4>
+         </a>
+         <a href="#" class="news__item">
+            <img src="images/news-8.png" alt="news image">
+            <h4 class="news__item-title">
+               Организация и проведение международных конгрессно-выставочных мероприятий.
+            </h4>
+         </a>
+      </div>
+   </section>
+
+   <section class="contacts">
+
+      <!--       <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11982.753648588314!2d69.2822592!3d41.3373884!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bb1449ce571%3A0x9e652a244ad74f6f!2z0JPQo9CfICJJbnRlcmZvcnVtIg!5e0!3m2!1sru!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+      <div class="container">
+         <h2>
+            кОНТАКТЫ
+         </h2>
+
+         <div class="row">
+            <div class="col-lg-4 col-12">
+               <div class="contacts__info">
+                  <a class="mail" href="mailto:info@interforum.uz">
+                     <span>Электронная почта</span>
+                     info@interforum.uz
+                  </a>
+                  <a class="phone" href="tel:998712385767">
+                     <span>Номер телефона</span>
+                     +998 71 238 57 67
+                  </a>
+                  <a class="adress" href="#">
+                     <span>Адрес</span>
+                     ул.Амира Темура 107Б
+                  </a>
+               </div>
+            </div>
+
+            <div class="col-lg-3 col-12">
+               <div class="contacts__main-logo">
+                  <img src="images/main-logo.svg" alt="logo">
+               </div>
+            </div>
+
+            <div class="col-lg-5 col-12">
+               <form action="https://interforum.uz/contacts-create" method="POST">
+                  <!-- <input type="hidden" name="_token" value="YDZ8diLDnnpTHpIMF54zyUEjam7WQAJxvXQjQwTo"> -->
+                  <label for="name">
+                     Ваше имя*
+                     <input type="text" id="name">
+                  </label>
+                  <label for="phone">
+                     НОМЕР ТЕЛЕФОНА*
+                     <input type="phone" id="phone">
+                  </label>
+                  <label for="message">
+                     СООБЩЕНИЕ
+                     <textarea name="" id="message"></textarea>
+                  </label>
+
+                  <button type="submit">
+                     Оставить заявку
+                  </button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="location">
+      <div class="location__wrapper">
+         <div class="location__inner">
+            <a class="location__info" href="#">
+               <span href="#">
+                  <span>
+                     Адрес
+                  </span>
+                  ул.Амира Темура 107Б
+               </span>
+            </a>
+            <a class="location__img" href="#">
+               <img src="images/location.svg" alt="">
+            </a>
+         </div>
+      </div>
+   </section>
+
+   <section class="links">
+      <!--  <div class="bouncing-blobs-container">
             <div class="bouncing-blobs-glass"></div>
             <div class="bouncing-blobs">
                 <div class="bouncing-blob bouncing-blob--blue"></div>
@@ -825,255 +547,186 @@
                 <div class="bouncing-blob bouncing-blob--purple"></div>
             </div>
         </div> -->
-        <div class="container">
-            <h2>
-                полезные ссылки
-            </h2>
-            <div class="links__cover">
-                <div class="links__item-cover">
-                    <a class="links__item" href="#">
-                        <img src="images/coat_of_arms.png" alt="logo of link">
-                    </a>
+      <div class="container">
+         <h2>
+            полезные ссылки
+         </h2>
+         <div class="links__cover">
+            <div class="links__item-cover">
+               <a class="links__item" href="#">
+                  <img src="images/coat_of_arms.png" alt="logo of link">
+               </a>
 
-                    <p>
-                        Damn
-                    </p>
-                </div>
-                <div class="links__item-cover">
-                    <a class="links__item" href="#">
-                        <img src="images/links-logo-2.png" alt="logo of link">
-                    </a>
-                </div>
-                <div class="links__item-cover">
-                    <a class="links__item" href="#">
-                        <img src="images/links-logo-3.png" alt="logo of link">
-                    </a>
-                </div>
-                <div class="links__item-cover">
-                    <a class="links__item" href="#">
-                        <img src="images/coat_of_arms.png" alt="logo of link">
-                    </a>
-                </div>
-                <a class="links__item" href="#">
-                    <img src="images/links-logo-4.png" alt="logo of link">
-                </a>
-                <a class="links__item" href="#">
-                    <img src="images/links-logo-5.png" alt="logo of link">
-                </a>
-                <a class="links__item" href="#">
-                    <img src="images/coat_of_arms.png" alt="logo of link">
-                </a>
-                <a class="links__item" href="#">
-                    <img src="images/links-logo-6.png" alt="logo of link">
-                </a>
+               <p>
+                  Damn
+               </p>
             </div>
-        </div>
-    </section>
+            <div class="links__item-cover">
+               <a class="links__item" href="#">
+                  <img src="images/links-logo-2.png" alt="logo of link">
+               </a>
+            </div>
+            <div class="links__item-cover">
+               <a class="links__item" href="#">
+                  <img src="images/links-logo-3.png" alt="logo of link">
+               </a>
+            </div>
+            <div class="links__item-cover">
+               <a class="links__item" href="#">
+                  <img src="images/coat_of_arms.png" alt="logo of link">
+               </a>
+            </div>
+            <a class="links__item" href="#">
+               <img src="images/links-logo-4.png" alt="logo of link">
+            </a>
+            <a class="links__item" href="#">
+               <img src="images/links-logo-5.png" alt="logo of link">
+            </a>
+            <a class="links__item" href="#">
+               <img src="images/coat_of_arms.png" alt="logo of link">
+            </a>
+            <a class="links__item" href="#">
+               <img src="images/links-logo-6.png" alt="logo of link">
+            </a>
+         </div>
+      </div>
+   </section>
 
 </main>
 
-
 <footer class="footer">
 
+   <div class="container">
 
-    <div class="container">
+      <div class="footer__wrapper">
 
 
-        <div class="footer__wrapper">
 
+         <div class="footer__message">
 
+            <h2>
 
+               СВЯЖИТЕСЬ С НАМИ
 
+            </h2>
 
-            <div class="footer__message">
+            <a href="contacts.html">
 
+               Связаться
 
-                <h2>
+            </a>
 
+         </div>
 
-                    СВЯЖИТЕСЬ С НАМИ
 
 
-                </h2>
+         <div class="footer__inner">
 
+            <ul class="footer__list">
 
-                <a href="contacts.html">
+               <h4>
 
+                  Компания
 
-                    Связаться
+               </h4>
 
+               <li>
 
-                </a>
+                  <a href="#">
 
+                     Общая информация
 
-            </div>
+                  </a>
 
+               </li>
 
+               <li>
 
+                  <a href="#">
 
+                     Организационная структура
 
-            <div class="footer__inner">
+                  </a>
 
+               </li>
 
-                <ul class="footer__list">
+               <li>
 
+                  <a href="#">
 
-                    <h4>
+                     Руководство
 
+                  </a>
 
-                        Компания
+               </li>
 
+               <li>
 
-                    </h4>
+                  <a href="#">
 
+                     FAQ
 
-                    <li>
+                  </a>
 
+               </li>
 
-                        <a href="#">
 
 
-                            Общая информация
+               <h4>
 
+                  Ресурсы
 
-                        </a>
+               </h4>
 
 
-                    </li>
 
+               <li>
 
-                    <li>
+                  <a href="gallery.html">
 
+                     Галерея
 
-                        <a href="#">
+                  </a>
 
+               </li>
 
-                            Организационная структура
+               <li>
 
+                  <a href="#">
 
-                        </a>
+                     Новости
 
+                  </a>
 
-                    </li>
+               </li>
 
 
-                    <li>
 
+               <li>
 
-                        <a href="#">
+                  <a href="#">
 
+                     Об узбекистане
 
-                            Руководство
+                  </a>
 
+               </li>
 
-                        </a>
+               <li>
 
+                  <a href="#">
 
-                    </li>
+                     Для СМИ
 
+                  </a>
 
-                    <li>
+               </li>
 
+            </ul>
 
-                        <a href="#">
 
 
-                            FAQ
-
-
-                        </a>
-
-
-                    </li>
-
-
-
-
-
-                    <h4>
-
-
-                        Ресурсы
-
-
-                    </h4>
-
-
-
-
-
-                    <li>
-
-
-                        <a href="gallery.html">
-
-
-                            Галерея
-
-
-                        </a>
-
-
-                    </li>
-
-
-                    <li>
-
-
-                        <a href="#">
-
-
-                            Новости
-
-
-                        </a>
-
-
-                    </li>
-
-
-
-
-
-                    <li>
-
-
-                        <a href="#">
-
-
-                            Об узбекистане
-
-
-                        </a>
-
-
-                    </li>
-
-
-                    <li>
-
-
-                        <a href="#">
-
-
-                            Для СМИ
-
-
-                        </a>
-
-
-                    </li>
-
-
-                </ul>
-
-
-
-
-
-              <!--   <ul class="footer__list">
-
-
+            <!--   <ul class="footer__list">
 
 
 
@@ -1081,93 +734,67 @@
 
 
 
+            <div class="footer__info">
 
+               <a href="mailto:info@interforum.uz">
 
-                <div class="footer__info">
+                  <span>
 
+                     Электронная почта
 
-                    <a href="mailto:info@interforum.uz">
+                  </span>
 
+                  info@interforum.uz
 
-                        <span>
+               </a>
 
+               <a href="tel:998712385767">
 
-                            Электронная почта
+                  <span>
 
+                     Номер телефона
 
-                        </span>
+                  </span>
 
+                  +998 71 238 57 67
 
-                        info@interforum.uz
-
-
-                    </a>
-
-
-                    <a href="tel:998712385767">
-
-
-                        <span>
-
-
-                            Номер телефона
-
-
-                        </span>
-
-
-                        +998 71 238 57 67
-
-
-                    </a>
-
-
-                </div>
-
+               </a>
 
             </div>
 
+         </div>
 
 
 
+         <div class="footer__copyright">
 
-            <div class="footer__copyright">
+            <p>
 
+               Copyright © 2024 - InterForum.
 
-                <p>
-
-
-                    Copyright © 2024 - InterForum.
-
-
-                </p>
+            </p>
 
 
 
+            <p>
 
+               Политика конфиденциальности
 
-                <p>
+            </p>
 
-
-                    Политика конфиденциальности
-
-
-                </p>
-
-
-            </div>
+         </div>
 
 
 
+      </div>
 
-
-        </div>
-
-
-    </div>
-
+   </div>
 
 </footer>
+
+
+
+<!-- Resources -->
 
 
 
@@ -1175,13 +802,9 @@
 
 <script src="js/tween.js"></script>
 
-
 <script src="js/main.min.js"></script>
 
-
 </body>
-
-
 
 
 
